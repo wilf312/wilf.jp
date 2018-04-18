@@ -23,7 +23,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-content>
-      <v-toolbar-side-icon fixed @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-side-icon class="nav-button" fixed @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <router-view/>
     </v-content>
   </v-app>
@@ -51,3 +51,8 @@ export default {
   name: 'App'
 }
 </script>
+
+<style scoped lang="stylus">
+  .nav-button
+    z-index 5
+</style>

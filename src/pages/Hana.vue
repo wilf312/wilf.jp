@@ -84,9 +84,4 @@ export default {
   height 100vh
   position fixed
   overflow hidden
-
-  h1
-    position absolute
-    top 50vh
-    font-size 20rem
 </style>
