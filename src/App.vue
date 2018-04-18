@@ -46,6 +46,8 @@ export default {
       title: 'Vuetify.js'
     }
   },
+  mounted () {
+  },
   name: 'App'
 }
 </script>

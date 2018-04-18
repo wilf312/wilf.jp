@@ -6040,6 +6040,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-draggable@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vue-draggable/-/vue-draggable-1.0.3.tgz#8e51a407fd840c331cf8f3332d0d25a138dc1078"
+
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"
@@ -6091,6 +6095,10 @@ vue@^2.5.2:
 vuetify@^1.0.0:
   version "1.0.15"
   resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.0.15.tgz#c290062566db635284a02b390bd60be69ad76aa8"
+
+vuex@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
 
 watchpack@^1.4.0:
   version "1.5.0"
@@ -6209,6 +6217,10 @@ widest-line@^2.0.0:
 window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
+
+woothee@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/woothee/-/woothee-1.7.0.tgz#fc77aab005b8a0c57a249d0334f71c47afd2937a"
 
 wordwrap@0.0.2:
   version "0.0.2"
