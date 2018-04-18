@@ -10,8 +10,9 @@
       <v-list>
         <v-list-tile
           value="true"
-          v-for="(item, i) in items"
+          v-for="(item, i) in routes"
           :key="i"
+          :to="{name: item.name}"
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -30,23 +31,28 @@
 </template>
 
 <script>
+import router from './router'
+
 export default {
   data () {
     return {
-      clipped: false,
       drawer: false,
-      fixed: false,
-      items: [{
-        icon: 'bubble_chart',
-        title: 'Inspire'
-      }],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+      route: [],
+      miniVariant: false
     }
   },
   mounted () {
+  },
+  computed: {
+    routes: () => {
+      return router.options.routes.map(({name, meta: {title}}) => {
+        return {
+          icon: 'bubble_chart',
+          title,
+          name
+        }
+      })
+    }
   },
   name: 'App'
 }
