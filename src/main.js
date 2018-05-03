@@ -6,7 +6,7 @@ import UA from 'woothee'
 import App from './App'
 import router from './router'
 import store from './store'
-import * as util from '@/util/url'
+import * as url from '@/util/url'
 
 import {
   Vuetify,
@@ -43,7 +43,7 @@ store.state.common.dimension = {
 }
 
 // httpの場合はhttpsに遷移
-util.httpToHttps(location)
+url.httpToHttps()
 
 Vue.config.productionTip = false
 

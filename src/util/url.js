@@ -1,6 +1,7 @@
-export const httpToHttps = ({protocol, replace, href, hostname}) => {
+export const httpToHttps = (loc = location) => {
+  const {protocol, href, hostname} = loc
   if (protocol === 'http:' && hostname !== 'localhost') {
     const redirect = href.replace(/http:/, 'https:')
-    replace(redirect)
+    loc.replace(redirect)
   }
 }
