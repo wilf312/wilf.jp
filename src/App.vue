@@ -62,11 +62,11 @@ export default {
   @import './common/reset.css'
   @import './common/font.css'
   html
-    @media all and (orientation: landscape)
-      font-size 1px !important
+    @media all and (max-width: 600px)
+      font-size 3vw !important
 
-    @media all and (orientation: portrait)
-      font-size 3px !important
+    @media all and (min-width: 601px)
+      font-size 1px !important
   .nav-button
     z-index 5
 </style>
