@@ -1,40 +1,45 @@
 <template>
-<v-container fluid :class="[name, 'scroll-y']">
-  <AutoKana :onChange="test" />
-  {{testValue}}
-</v-container>
+  <v-container fluid :class="[name, 'scroll-y']">
+    <p><AutoKana :onChange="test" /></p>
+    <p v-if="testValue">
+      {{testValue}}
+    </p>
+    <p v-else>
+      ここに入力されたひらがなが表示される
+    </p>
+  </v-container>
 </template>
 
 <script>
-import AutoKana from '@/components/AutoKana'
-const name = __filename.match(/^src\/[\w|\\/]*\/(\w*).vue$/)[1]
+  import AutoKana from '@/components/AutoKana'
+  const name = __filename.match(/^src\/[\w|\\/]*\/(\w*).vue$/)[1]
 
-export default {
-  name,
-  computed: {
-  },
-  data () {
-    return {
-      name,
-      testValue: ''
+  export default {
+    name,
+    computed: {
+    },
+    data () {
+      return {
+        name,
+        testValue: ''
+      }
+    },
+    methods: {
+      test: function (value) {
+        console.log(value)
+        this.testValue = value
+      }
+    },
+    components: {
+      AutoKana
     }
-  },
-  methods: {
-    test: function (value) {
-      console.log(value)
-      this.testValue = value
-    }
-  },
-  components: {
-    AutoKana
   }
-}
 </script>
 
 <style scoped lang="stylus">
-.Blog
-  height 100vh
-  overflow auto
+  .AutoKanaTest
+    >>> input
+      border solid 1px gray
 
 
 </style>
