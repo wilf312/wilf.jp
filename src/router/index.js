@@ -4,6 +4,7 @@ import Hana from 'pages/Hana'
 import Profile from 'pages/Profile'
 import Blog from 'pages/Blog'
 import Draggable from 'pages/Draggable'
+import AutoKana from 'pages/AutoKanaTest'
 
 Vue.use(Router)
 
@@ -39,6 +40,14 @@ export default new Router({
       component: Draggable,
       meta: {
         title: 'draggable test'
+      }
+    },
+    {
+      path: '/AutoKana',
+      name: 'AutoKana',
+      component: AutoKana,
+      meta: {
+        title: 'AutoKana'
       }
     }
   ]
