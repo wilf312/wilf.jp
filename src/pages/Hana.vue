@@ -76,7 +76,7 @@ export default {
 
     let count = 0
     const timerFunc = () => {
-      this.cnt += this.plus
+      if (this.cnt < 60) this.cnt += this.plus
       count++
       if (count < time) {
         setTimeout(timerFunc, interval)
