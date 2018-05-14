@@ -10,7 +10,7 @@
       <p>
         <v-text-field
                 name="email"
-                label="name"
+                label="email"
         ></v-text-field>
       </p>
       <div data-netlify-recaptcha></div>
