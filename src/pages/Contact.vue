@@ -27,20 +27,16 @@
 
   export default {
     name,
-    computed: {
-    },
     data () {
       return {
         name
       }
-    },
-    methods: {
     }
   }
 </script>
 
 <style scoped lang="stylus">
   .Contact
-  background-color #d2d2d2
+    background-color #d2d2d2
 
 </style>
