@@ -5,6 +5,7 @@ import Profile from 'pages/Profile'
 import Blog from 'pages/Blog'
 import Draggable from 'pages/Draggable'
 import AutoKana from 'pages/AutoKanaTest'
+import Contact from 'pages/Contact'
 
 Vue.use(Router)
 
@@ -48,6 +49,14 @@ export default new Router({
       component: AutoKana,
       meta: {
         title: 'AutoKana'
+      }
+    },
+    {
+      path: '/Contact',
+      name: 'Contact',
+      component: Contact,
+      meta: {
+        title: 'Contact'
       }
     }
   ]
