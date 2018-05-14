@@ -1,30 +1,23 @@
 <template>
   <div>
-    <form name="contact" netlify-honeypot="bot-field" method="POST" action="thank-you" netlify>
-      <p class="hidden">
-        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+    <form name="contact" action="" method="post" netlify>
+      <p>
+        <v-text-field
+                name="name"
+                label="name"
+        ></v-text-field>
       </p>
       <p>
-        <label>Email: <input type="text" name="name"></label>
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type=”submit”>Send</button>
-      </p>
-    </form>
-    <form name="contact" method="POST" action="thank-you" netlify>
-      <p>
-        <label>Email: <input type="text" name="name"></label>
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
+        <v-text-field
+                name="email"
+                label="name"
+        ></v-text-field>
       </p>
       <div data-netlify-recaptcha></div>
       <p>
-        <button type=”submit”>Send</button>
+        <input class="form-button" type="submit" value="Send message" />
       </p>
+      <input type="hidden" name="form-name" value="contact" />
     </form>
   </div>
 </template>
@@ -48,6 +41,6 @@
 
 <style scoped lang="stylus">
   .Contact
-    background-color #d2d2d2
+  background-color #d2d2d2
 
 </style>
