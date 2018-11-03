@@ -2,25 +2,26 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hana from 'pages/Hana'
 import Profile from 'pages/Profile'
-import Blog from 'pages/Blog'
 import Draggable from 'pages/Draggable'
 import AutoKana from 'pages/AutoKanaTest'
-import Contact from 'pages/Contact'
+import Tax from 'pages/Tax'
+// import Blog from 'pages/Blog'
+// import Contact from 'pages/Contact'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    // {
+    //   path: '/',
+    //   name: 'Blog',
+    //   component: Blog,
+    //   meta: {
+    //     title: 'Blog'
+    //   }
+    // },
     {
       path: '/',
-      name: 'Blog',
-      component: Blog,
-      meta: {
-        title: 'Blog'
-      }
-    },
-    {
-      path: '/Profile',
       name: 'Profile',
       component: Profile,
       meta: {
@@ -52,12 +53,20 @@ export default new Router({
       }
     },
     {
-      path: '/Contact',
-      name: 'Contact',
-      component: Contact,
+      path: '/Tax',
+      name: 'Tax',
+      component: Tax,
       meta: {
-        title: 'Contact'
+        title: 'Tax'
       }
     }
+    // {
+    //   path: '/Contact',
+    //   name: 'Contact',
+    //   component: Contact,
+    //   meta: {
+    //     title: 'Contact'
+    //   }
+    // }
   ]
 })
