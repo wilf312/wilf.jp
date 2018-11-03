@@ -36,6 +36,12 @@
       disabled
       class="input-group--focused"
     ></v-text-field>
+    <v-text-field
+      label="住民税_所得税_合計"
+      :value="住民税_所得税_合計"
+      disabled
+      class="input-group--focused"
+    ></v-text-field>
   </div>
 </v-container>
 </template>
@@ -48,7 +54,7 @@ export default {
   name,
   computed: {
     '課税所得' () {
-      return this.income - this.cost
+      return parseInt(this.income, 10) - parseInt(this.cost, 10)
     },
     '所得税' () {
       return this.tax.incomeTax(this['課税所得'])
@@ -61,6 +67,9 @@ export default {
     },
     '住民税' () {
       return this.tax.residentTax(this['課税所得'])
+    },
+    '住民税_所得税_合計' () {
+      return this['所得税_復興特別所得税'] + this['住民税']
     }
   },
   data () {
