@@ -4,11 +4,13 @@
     <h1>税計算</h1>
     <v-text-field
       v-model="income"
+      mask="nnnnnnnnnnn"
       label="売上"
       class="input-group--focused"
     ></v-text-field>
     <v-text-field
       v-model="cost"
+      mask="nnnnnnnnnnn"
       label="経費"
       class="input-group--focused"
     ></v-text-field>
@@ -54,6 +56,9 @@ export default {
   name,
   computed: {
     '課税所得' () {
+      if (!this.income || (!this.cost && this.cost !== 0)) {
+        return 0
+      }
       return parseInt(this.income, 10) - parseInt(this.cost, 10)
     },
     '所得税' () {
@@ -75,8 +80,8 @@ export default {
   data () {
     return {
       name,
-      cost: 1500000,
-      income: 10000000,
+      cost: 0,
+      income: 0,
       tax
     }
   },
