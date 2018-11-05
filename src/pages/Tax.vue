@@ -15,6 +15,12 @@
       class="input-group--focused"
     ></v-text-field>
     <v-text-field
+      v-model="課税控除額"
+      mask="nnnnnnnnnnn"
+      label="課税控除額 青色申告特別控除: 65万 小規模企業共済: max 84万"
+      class="input-group--focused"
+    ></v-text-field>
+    <v-text-field
       label="所得税"
       :value="所得税"
       disabled
@@ -56,10 +62,10 @@ export default {
   name,
   computed: {
     '課税所得' () {
-      if (!this.income || (!this.cost && this.cost !== 0)) {
+      if (!this.income || (!this.cost && this.cost !== 0) || (!this['課税控除額'] && this['課税控除額'] !== 0)) {
         return 0
       }
-      return parseInt(this.income, 10) - parseInt(this.cost, 10)
+      return parseInt(this.income, 10) - parseInt(this.cost, 10) - parseInt(this['課税控除額'], 10)
     },
     '所得税' () {
       return this.tax.incomeTax(this['課税所得'])
@@ -82,6 +88,7 @@ export default {
       name,
       cost: 0,
       income: 0,
+      '課税控除額': 650000,
       tax
     }
   },
