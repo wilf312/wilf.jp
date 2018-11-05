@@ -14,10 +14,12 @@
       label="経費"
       class="input-group--focused"
     ></v-text-field>
+    <h3>課税控除額</h3>
+    <p>課税控除額 青色申告特別控除: 65万 小規模企業共済: max 84万</p>
     <v-text-field
       v-model="課税控除額"
       mask="nnnnnnnnnnn"
-      label="課税控除額 青色申告特別控除: 65万 小規模企業共済: max 84万"
+      label=""
       class="input-group--focused"
     ></v-text-field>
     <v-text-field
